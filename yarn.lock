@@ -720,10 +720,10 @@ hexo-server@^3.0.0:
     picocolors "^1.0.0"
     serve-static "^1.14.1"
 
-hexo-theme-landscape@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmmirror.com/hexo-theme-landscape/-/hexo-theme-landscape-1.0.0.tgz#43a549ebb2bea73196200ee4397feb764131a481"
-  integrity sha512-bWQJWMqQI78wWiJPQZq5pJBH20TM442ShCaHGRetuEgMraxH0OKxB3NTupJzNEkzEk8DV2yrdizkXdKN6i501A==
+hexo-theme-keep@^3.7.3:
+  version "3.7.3"
+  resolved "https://registry.npmmirror.com/hexo-theme-keep/-/hexo-theme-keep-3.7.3.tgz#d139312250276ddcc842a213c5d6cf5165cc07e3"
+  integrity sha512-Wlt2/C5EMVTjxJ4I2P/ciNiRYJoF0dsPMXUtc9iN1ULD071uIaacPuTOskv78mwY5EidmbWwSK6guijmkdZDwQ==
 
 hexo-util@^2.0.0, hexo-util@^2.5.0, hexo-util@^2.7.0:
   version "2.7.0"
