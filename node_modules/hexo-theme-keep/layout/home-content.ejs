@@ -1,0 +1,38 @@
+<div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list border-box">
+        <% page.posts.forEach(post => { %>
+            <li class="home-article-item">
+
+                <% if (post?.cover) { %>
+                    <div class="home-article-item-top border-box"
+                         style="height: <%= post?.cover_height ? post?.cover_height + 'px' : '8rem' %>"
+                    >
+                        <img class="cover-img" src="<%= post.cover %>" alt="<%= post.title %>">
+                    </div>
+                <% } %>
+
+                <div class="home-article-item-bottom border-box">
+                    <% if (post.sticky) { %>
+                        <i class="fas fa-thumbtack sticky-icon"></i>
+                    <% } %>
+                    <h3 class="home-article-title border-box">
+                        <a href="<%- url_for(post.path) %>">
+                            <%= post.title %>
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        <% if (post.excerpt) { %>
+                            <%- post.excerpt %>
+                        <% } else { %>
+                            <%- truncate(strip_html(post.content), { length: 128 }) %>
+                        <% } %>
+                    </div>
+
+                    <%- partial('_partial/article-meta-info', { post: post, page_type: 'home' }) %>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+    <%- partial('_partial/paginator', { page_info: page }) %>
+</div>

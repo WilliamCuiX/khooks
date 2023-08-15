@@ -1,0 +1,27 @@
+$tag-name-font-size = 1.5rem
+
+.tag-container {
+
+  keep-container(1, 2rem, 2rem)
+
+  .tag-name {
+    margin-bottom $component-spacing-value
+    padding-bottom 1rem
+    color var(--text-color-2)
+    font-weight 600
+    font-size $tag-name-font-size
+    border-bottom 0.1rem solid var(--border-color)
+
+    i {
+      color var(--text-color-2)
+    }
+
+    +keep-tablet() {
+      font-size $tag-name-font-size * 0.9
+    }
+
+    +keep-mobile() {
+      font-size $tag-name-font-size * 0.8
+    }
+  }
+}
